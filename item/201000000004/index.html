@@ -1,222 +1,405 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SEISODO DIY AUDIO CONNECTOR SET</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIY AUDIO CONNECTOR SET | Item 201000000004 | SEISODO</title>
+  <meta name="description" content="NOBUNAGA Labs Pro Studio DIY AUDIO CONNECTOR SET。3.5mm 3極プラグ 5束、2.5mm 4極バランスジャック 1束のDIY向けコネクターセット。">
   <style>
-    :root {
-      --black:#111;
-      --gold:#a3834b;
-      --paper:#f5f0e6;
-      --kraft:#b8945f;
-      --ink:#1a1a1a;
-      --muted:#666;
-      --line:#d8d0c2;
+    :root{
+      --bg:#b8955d;
+      --paper:#fbf8f1;
+      --card:#fffdf8;
+      --ink:#111;
+      --muted:#5f5a52;
+      --gold:#a88647;
+      --line:#ded3c1;
+      --black:#090909;
+      --blue:#0070ba;
     }
+
     *{box-sizing:border-box}
+
     body{
       margin:0;
-      font-family: Arial, "Helvetica Neue", "Noto Sans JP", sans-serif;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
       color:var(--ink);
-      background:linear-gradient(120deg,#b99562,#d2b98d 42%,#a77f4e);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(255,255,255,.28),transparent 32%),
+        linear-gradient(135deg,#c7aa77,#a77e45);
+      line-height:1.75;
     }
+
+    a{color:inherit}
+
     .page{
-      max-width:1180px;
-      margin:0 auto;
-      padding:36px 22px 56px;
+      width:min(1180px,calc(100% - 32px));
+      margin:28px auto 48px;
     }
+
     .hero{
-      background:rgba(255,255,255,.86);
-      border:1px solid rgba(255,255,255,.6);
-      box-shadow:0 24px 70px rgba(0,0,0,.2);
-      border-radius:22px;
-      overflow:hidden;
-    }
-    .hero-grid{
       display:grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap:0;
-      background:#fffaf2;
+      grid-template-columns:1.1fr .95fr;
+      overflow:hidden;
+      border-radius:22px;
+      background:var(--card);
+      box-shadow:0 22px 60px rgba(25,16,5,.18);
+      min-height:650px;
     }
+
     .visual{
-      padding:30px;
-      background:radial-gradient(circle at 30% 18%,#fff 0,#fbf5ea 45%,#efe2cf 100%);
       display:flex;
       align-items:center;
       justify-content:center;
+      background:linear-gradient(90deg,#fbf6eb,#f8f0df);
+      padding:44px 30px;
+      min-width:0;
     }
-    .visual img{
+
+    .image-frame{
       width:100%;
-      max-width:760px;
-      border-radius:8px;
-      box-shadow:0 18px 42px rgba(0,0,0,.22);
+      max-width:610px;
+      padding:12px;
+      border-radius:10px;
+      background:#b8955d;
+      box-shadow:0 18px 38px rgba(0,0,0,.18);
+      cursor:zoom-in;
+    }
+
+    .image-frame img{
       display:block;
+      width:100%;
+      height:auto;
+      border:0;
     }
+
     .info{
-      padding:54px 52px;
+      padding:56px 58px 54px;
       background:#fff;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
     }
+
     .brand{
-      display:inline-flex;
-      align-items:center;
-      gap:14px;
-      letter-spacing:.18em;
-      font-weight:800;
-      font-size:14px;
+      display:inline-block;
+      background:var(--black);
       color:#fff;
-      background:#111;
-      padding:14px 18px;
-      width:max-content;
-      margin-bottom:30px;
+      padding:10px 22px;
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.22em;
+      line-height:1;
+      margin-bottom:28px;
     }
-    .eyebrow{
+
+    .series{
       color:var(--gold);
       font-size:14px;
-      font-weight:800;
-      letter-spacing:.22em;
-      text-transform:uppercase;
-      margin-bottom:12px;
-    }
-    h1{
-      font-size:52px;
-      line-height:.96;
-      letter-spacing:.035em;
-      margin:0 0 16px;
       font-weight:900;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      margin-bottom:10px;
     }
-    .sub{
-      font-size:21px;
-      letter-spacing:.08em;
-      font-weight:700;
+
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(42px,5vw,70px);
+      line-height:.96;
+      font-weight:1000;
+      letter-spacing:.035em;
+    }
+
+    .lead-items{
+      font-size:22px;
+      line-height:1.5;
+      font-weight:900;
       margin:0 0 26px;
     }
+
     .badge{
       display:inline-block;
       background:var(--gold);
       color:#fff;
-      font-weight:800;
-      letter-spacing:.06em;
-      padding:12px 16px;
       border-radius:8px;
-      margin-bottom:32px;
-    }
-    .desc{
-      font-size:16px;
-      line-height:1.9;
-      color:#333;
+      padding:10px 20px;
+      font-weight:900;
+      letter-spacing:.04em;
       margin-bottom:30px;
     }
-    .cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
-    .btn{
-      text-decoration:none;
-      background:#111;
-      color:#fff;
-      padding:15px 24px;
-      border-radius:999px;
-      font-weight:800;
-      letter-spacing:.08em;
+
+    .price{
+      margin:12px 0 4px;
+      font-size:38px;
+      line-height:1.2;
+      font-weight:1000;
+      letter-spacing:.04em;
     }
-    .btn.secondary{background:#f3eadb;color:#111;border:1px solid #d7c7aa}
-    .price{font-size:30px;font-weight:900;margin:4px 0 8px;color:#111;letter-spacing:.04em}
-    .tax-note{font-size:13px;line-height:1.75;color:#666;margin:0 0 18px}
-    .paypal-btn{display:inline-block;text-decoration:none;background:#0070ba;color:#fff;padding:16px 28px;border-radius:999px;font-weight:900;letter-spacing:.06em;margin:2px 0 18px;box-shadow:0 8px 20px rgba(0,112,186,.22)}
-    .paypal-btn:hover{background:#005ea6}
-    .meta{font-size:13px;color:var(--muted)}
+
+    .tax-note{
+      margin:8px 0 26px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .desc{
+      color:#24201b;
+      margin:0 0 28px;
+      font-size:16px;
+    }
+
+    .paypal{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:280px;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff;
+      text-decoration:none;
+      padding:15px 28px;
+      font-weight:900;
+      letter-spacing:.04em;
+      box-shadow:0 10px 24px rgba(0,112,186,.22);
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    }
+
+    .paypal:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.03);
+      box-shadow:0 14px 32px rgba(0,112,186,.28);
+    }
+
+    .meta{
+      margin-top:20px;
+      color:#736a5f;
+      font-size:13px;
+      letter-spacing:.02em;
+    }
+
     section{
       margin-top:28px;
-      background:rgba(255,255,255,.94);
-      border-radius:20px;
-      padding:34px;
-      box-shadow:0 10px 30px rgba(0,0,0,.12);
+      padding:36px;
+      border-radius:18px;
+      background:var(--card);
+      box-shadow:0 12px 30px rgba(25,16,5,.12);
     }
-    .section-title{
-      font-size:26px;
-      margin:0 0 18px;
-      letter-spacing:.06em;
+
+    h2{
+      margin:0 0 22px;
+      font-size:28px;
+      letter-spacing:.13em;
+      line-height:1.1;
+      font-weight:1000;
+    }
+
+    .contents-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:18px;
+    }
+
+    .content-card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      background:#fffefb;
+    }
+
+    .content-card h3{
+      margin:0 0 8px;
+      font-size:17px;
       font-weight:900;
     }
-    .cards{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:16px;
+
+    .content-card p{
+      margin:0;
+      color:#3e3932;
+      font-size:15px;
+      line-height:1.55;
     }
-    .card{
-      border:1px solid var(--line);
-      border-radius:16px;
-      padding:22px;
-      background:#fffdf8;
-    }
-    .card b{display:block;font-size:18px;margin-bottom:8px}
-    .card p{margin:0;color:#555;line-height:1.7}
-    .spec{
+
+    table{
       width:100%;
       border-collapse:collapse;
       overflow:hidden;
       border-radius:12px;
       background:#fff;
     }
-    .spec th,.spec td{
-      border-bottom:1px solid var(--line);
+
+    th,td{
       padding:15px 18px;
+      border-bottom:1px solid var(--line);
       text-align:left;
-      font-size:15px;
+      vertical-align:top;
     }
-    .spec th{width:34%;background:#fbf4e9;font-weight:800}
-    .note{margin-top:14px;color:#666;font-size:13px}
-    @media(max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
-      .info{padding:36px 26px}
-      h1{font-size:40px}
-      .cards{grid-template-columns:1fr}
+
+    th{
+      width:34%;
+      background:#f7efe2;
+      font-weight:900;
+    }
+
+    tr:last-child th,
+    tr:last-child td{border-bottom:0}
+
+    .small-note{
+      margin:16px 0 0;
+      color:#6f675d;
+      font-size:13px;
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:50;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.82);
+      padding:24px;
+    }
+
+    .lightbox:target{display:flex}
+
+    .lightbox img{
+      max-width:min(1100px,96vw);
+      max-height:88vh;
+      background:#fff;
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+
+    .lightbox-close{
+      position:fixed;
+      inset:0;
+      cursor:zoom-out;
+    }
+
+    .lightbox-hint{
+      position:fixed;
+      top:18px;
+      right:22px;
+      color:#fff;
+      font-size:13px;
+      opacity:.82;
+    }
+
+    @media (max-width:900px){
+      .page{width:100%;margin:0}
+      .hero{
+        grid-template-columns:1fr;
+        border-radius:0;
+      }
+      .visual{padding:28px 18px}
+      .info{padding:38px 24px 42px}
+      .contents-grid{grid-template-columns:1fr}
+      section{
+        margin:18px 14px;
+        padding:26px 20px;
+      }
+      .price{font-size:32px}
+      .paypal{width:100%;min-width:0}
+      th,td{
+        display:block;
+        width:100%;
+      }
+      th{border-bottom:0}
     }
   </style>
 </head>
+
 <body>
   <main class="page">
-    <div class="hero">
-      <div class="hero-grid">
-        <div class="visual">
-          <img src="label.png" alt="SEISODO DIY AUDIO CONNECTOR SET"> 
-        </div>
-        <div class="info">
-          <div class="brand">SEISODO <span>JAPAN AUDIO PARTS</span></div>
-          <div class="eyebrow">NOBUNAGA Labs Pro Studio</div>
-          <h1>DIY AUDIO<br>CONNECTOR SET</h1>
-          <p class="sub">3.5mm 3極プラグ × 5束<br>2.5mm 4極バランスジャック × 1束</p>
-          <div class="badge">VALUE PACK｜5 BUNDLES + 1 BUNDLE</div>
-          <div class="price">¥3,000（税別）</div>
-          <p class="tax-note">※日本国内への発送は別途消費税（10%）が加算されます。海外発送の場合、消費税はかかりません。<br>※別途送料がかかります。送料はお届け先地域およびご注文数量に応じて異なり、チェックアウト時に自動計算されます。</p>
-          <p class="desc">音楽制作、イヤホンケーブル製作、修理・交換用途に適したDIY向けコネクターセットです。小ロット製作や工房作業に使いやすいよう、3.5mm 3極プラグと2.5mm 4極バランスジャックを組み合わせました。</p>
-          <a class="paypal-btn" href="https://www.paypal.com/ncp/payment/U7YKTG7LEA4G6" target="_blank" rel="noopener">PayPalで購入する</a>
-          <div class="meta">LOT 21004｜PRODUCT CODE 2010000000004</div>
-        </div>
+    <article class="hero">
+      <div class="visual">
+        <a class="image-frame" href="#label-image" aria-label="商品ラベル画像を拡大表示">
+          <img src="label.png" alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル">
+        </a>
       </div>
-    </div>
 
-    <section id="contents">
-      <h2 class="section-title">CONTENTS</h2>
-      <div class="cards">
-        <div class="card"><b>3.5mm 3極プラグ</b><p>NLP-SSD-IS3.5<br>5 BUNDLES</p></div>
-        <div class="card"><b>2.5mm 4極バランスジャック</b><p>NLP-SSD-TPFEM<br>1 BUNDLE</p></div>
-        <div class="card"><b>用途</b><p>DIY & Custom Soldering Recommended<br>For Audio DIY / Pro Studio Series</p></div>
+      <div class="info">
+        <div class="brand">SEISODO&nbsp;&nbsp;JAPAN AUDIO PARTS</div>
+        <div class="series">NOBUNAGA Labs Pro Studio</div>
+
+        <h1>DIY AUDIO<br>CONNECTOR<br>SET</h1>
+
+        <p class="lead-items">
+          3.5mm 3極プラグ × 5束<br>
+          2.5mm 4極バランスジャック × 1束
+        </p>
+
+        <div class="badge">VALUE PACK | 5 BUNDLES + 1 BUNDLE</div>
+
+        <div class="price">¥3,000（税別）</div>
+        <p class="tax-note">
+          ※日本国内への発送は別途消費税（10%）が加算されます。海外発送の場合、消費税はかかりません。<br>
+          ※別途送料がかかります。送料はお届け先地域およびご注文数量に応じて異なり、チェックアウト時に自動計算されます。
+        </p>
+
+        <p class="desc">
+          音楽制作、イヤホンケーブル製作、修理・交換用途に適したDIY向けコネクターセットです。
+          小ロット製作や工房作業に使いやすいよう、3.5mm 3極プラグと2.5mm 4極バランスジャックを組み合わせました。
+        </p>
+
+        <a class="paypal"
+           href="https://www.paypal.com/ncp/payment/U7YKTG7LEA4G6"
+           target="_blank"
+           rel="noopener noreferrer">
+          PayPalで購入する
+        </a>
+
+        <div class="meta">LOT 21004&nbsp; | &nbsp;PRODUCT CODE 201000000004</div>
+      </div>
+    </article>
+
+    <section>
+      <h2>CONTENTS</h2>
+      <div class="contents-grid">
+        <div class="content-card">
+          <h3>3.5mm 3極プラグ</h3>
+          <p>NLP-SSD-IS3.5<br>5 BUNDLES</p>
+        </div>
+        <div class="content-card">
+          <h3>2.5mm 4極バランスジャック</h3>
+          <p>NLP-SSD-TPFEM<br>1 BUNDLE</p>
+        </div>
+        <div class="content-card">
+          <h3>用途</h3>
+          <p>DIY & Custom Soldering Recommended<br>For Audio DIY / Pro Studio Series</p>
+        </div>
       </div>
     </section>
 
-    <section id="spec">
-      <h2 class="section-title">SPECIFICATION</h2>
-      <table class="spec">
-        <tr><th>シリーズ</th><td>NOBUNAGA Labs Pro Studio</td></tr>
-        <tr><th>商品名</th><td>DIY AUDIO CONNECTOR SET</td></tr>
-        <tr><th>3.5mm プラグ</th><td>NLP-SSD-IS3.5｜5 BUNDLES</td></tr>
-        <tr><th>2.5mm ジャック</th><td>NLP-SSD-TPFEM｜1 BUNDLE</td></tr>
-        <tr><th>管理番号</th><td>LOT 21004 / PRODUCT CODE 2010000000004</td></tr>
+    <section>
+      <h2>SPECIFICATION</h2>
+      <table>
+        <tr>
+          <th>シリーズ</th>
+          <td>NOBUNAGA Labs Pro Studio</td>
+        </tr>
+        <tr>
+          <th>商品名</th>
+          <td>DIY AUDIO CONNECTOR SET</td>
+        </tr>
+        <tr>
+          <th>3.5mm プラグ</th>
+          <td>NLP-SSD-IS3.5 | 5 BUNDLES</td>
+        </tr>
+        <tr>
+          <th>2.5mm ジャック</th>
+          <td>NLP-SSD-TPFEM | 1 BUNDLE</td>
+        </tr>
+        <tr>
+          <th>管理番号</th>
+          <td>LOT 21004 / PRODUCT CODE 201000000004</td>
+        </tr>
       </table>
-      <p class="note">※製品の仕様・内容は予告なく変更することがあります。予めご了承ください。</p>
+      <p class="small-note">※製品の仕様・内容は予告なく変更することがあります。予めご了承ください。</p>
     </section>
   </main>
+
+  <div id="label-image" class="lightbox" aria-label="拡大画像">
+    <a href="#" class="lightbox-close" aria-label="閉じる"></a>
+    <div class="lightbox-hint">クリックで閉じる</div>
+    <img src="label.png" alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル拡大画像">
+  </div>
 </body>
 </html>
