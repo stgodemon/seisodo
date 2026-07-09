@@ -1,157 +1,496 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seisodo Corp.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DIY AUDIO CONNECTOR SET | Item 201000000004 | SEISODO</title>
+  <meta name="description" content="NOBUNAGA Labs Pro Studio DIY AUDIO CONNECTOR SET。3.5mm 3極プラグ 5束、2.5mm 4極バランスジャック 1束のDIY向けコネクターセット。">
+  <style>
+    :root{
+      --bg:#b8955d;
+      --paper:#fbf8f1;
+      --card:#fffdf8;
+      --ink:#111;
+      --muted:#5f5a52;
+      --gold:#a88647;
+      --line:#ded3c1;
+      --black:#090909;
+      --blue:#0070ba;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-    line-height:1.8;
-}
+    *{box-sizing:border-box}
 
-header{
-    background:#1f2937;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
-}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at 20% 10%,rgba(255,255,255,.28),transparent 32%),
+        linear-gradient(135deg,#c7aa77,#a77e45);
+      line-height:1.75;
+    }
 
-header h1{
-    margin:0;
-    font-size:42px;
-}
+    .page{
+      width:min(1180px,calc(100% - 32px));
+      margin:28px auto 48px;
+    }
 
-header p{
-    margin-top:10px;
-    font-size:18px;
-    color:#d1d5db;
-}
+    .hero{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      overflow:hidden;
+      border-radius:22px;
+      background:var(--card);
+      box-shadow:0 22px 60px rgba(25,16,5,.18);
+      min-height:650px;
+    }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 20px;
-}
+    .visual{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:22px;
+      background:linear-gradient(90deg,#fbf6eb,#f8f0df);
+      padding:34px 30px;
+      min-width:0;
+    }
 
-h2{
-    border-left:4px solid #1f2937;
-    padding-left:12px;
-}
+    .image-frame{
+      width:100%;
+      max-width:560px;
+      min-height:430px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background:#fdf9f1;
+      box-shadow:0 18px 38px rgba(0,0,0,.12);
+      overflow:hidden;
+      cursor:zoom-in;
+    }
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    .image-frame img{
+      display:block;
+      max-width:100%;
+      max-height:560px;
+      width:auto;
+      height:auto;
+      transition:opacity .18s ease;
+    }
 
-.card{
-    border:1px solid #ddd;
-    padding:20px;
-    border-radius:8px;
-}
+    .thumbs{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      align-items:flex-start;
+      width:100%;
+    }
 
-footer{
-    background:#f5f5f5;
-    text-align:center;
-    padding:40px;
-    margin-top:60px;
-}
-</style>
+    .thumb{
+      width:120px;
+      padding:8px;
+      border:2px solid transparent;
+      border-radius:14px;
+      background:rgba(255,255,255,.72);
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      transition:border-color .15s ease, transform .15s ease, background .15s ease;
+      font:inherit;
+    }
+
+    .thumb:hover{transform:translateY(-1px)}
+    .thumb.active{border-color:var(--gold);background:#fff}
+
+    .thumb img{
+      width:100%;
+      height:78px;
+      object-fit:contain;
+      display:block;
+      border-radius:8px;
+    }
+
+    .thumb span{
+      display:block;
+      margin-top:6px;
+      font-size:13px;
+      font-weight:800;
+      color:#3d352c;
+      text-align:center;
+    }
+
+    .hint{
+      color:#7c7164;
+      font-size:13px;
+      text-align:center;
+    }
+
+    .info{
+      padding:56px 58px 54px;
+      background:#fff;
+    }
+
+    .brand{
+      display:inline-block;
+      background:var(--black);
+      color:#fff;
+      padding:10px 22px;
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.22em;
+      line-height:1;
+      margin-bottom:28px;
+    }
+
+    .series{
+      color:var(--gold);
+      font-size:14px;
+      font-weight:900;
+      letter-spacing:.28em;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(42px,5vw,70px);
+      line-height:.96;
+      font-weight:1000;
+      letter-spacing:.035em;
+    }
+
+    .lead-items{
+      font-size:22px;
+      line-height:1.5;
+      font-weight:900;
+      margin:0 0 26px;
+    }
+
+    .badge{
+      display:inline-block;
+      background:var(--gold);
+      color:#fff;
+      border-radius:8px;
+      padding:10px 20px;
+      font-weight:900;
+      letter-spacing:.04em;
+      margin-bottom:30px;
+    }
+
+    .price{
+      margin:12px 0 4px;
+      font-size:38px;
+      line-height:1.2;
+      font-weight:1000;
+      letter-spacing:.04em;
+    }
+
+    .tax-note{
+      margin:8px 0 26px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.8;
+    }
+
+    .desc{
+      color:#24201b;
+      margin:0 0 28px;
+      font-size:16px;
+    }
+
+    .paypal{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-width:280px;
+      border-radius:999px;
+      background:var(--blue);
+      color:#fff;
+      text-decoration:none;
+      padding:15px 28px;
+      font-weight:900;
+      letter-spacing:.04em;
+      box-shadow:0 10px 24px rgba(0,112,186,.22);
+      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
+    }
+
+    .paypal:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.03);
+      box-shadow:0 14px 32px rgba(0,112,186,.28);
+    }
+
+    .meta{
+      margin-top:20px;
+      color:#736a5f;
+      font-size:13px;
+      letter-spacing:.02em;
+    }
+
+    section{
+      margin-top:28px;
+      padding:36px;
+      border-radius:18px;
+      background:var(--card);
+      box-shadow:0 12px 30px rgba(25,16,5,.12);
+    }
+
+    h2{
+      margin:0 0 22px;
+      font-size:28px;
+      letter-spacing:.13em;
+      line-height:1.1;
+      font-weight:1000;
+    }
+
+    .contents-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr 1fr;
+      gap:18px;
+    }
+
+    .content-card{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:22px;
+      background:#fffefb;
+    }
+
+    .content-card h3{
+      margin:0 0 8px;
+      font-size:17px;
+      font-weight:900;
+    }
+
+    .content-card p{
+      margin:0;
+      color:#3e3932;
+      font-size:15px;
+      line-height:1.55;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      overflow:hidden;
+      border-radius:12px;
+      background:#fff;
+    }
+
+    th,td{
+      padding:15px 18px;
+      border-bottom:1px solid var(--line);
+      text-align:left;
+      vertical-align:top;
+    }
+
+    th{
+      width:34%;
+      background:#f7efe2;
+      font-weight:900;
+    }
+
+    tr:last-child th,
+    tr:last-child td{border-bottom:0}
+
+    .small-note{
+      margin:16px 0 0;
+      color:#6f675d;
+      font-size:13px;
+    }
+
+    .lightbox{
+      position:fixed;
+      inset:0;
+      z-index:50;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,.82);
+      padding:24px;
+    }
+
+    .lightbox:target{display:flex}
+
+    .lightbox img{
+      max-width:min(1100px,96vw);
+      max-height:88vh;
+      background:#fff;
+      box-shadow:0 20px 60px rgba(0,0,0,.5);
+    }
+
+    .lightbox-close{
+      position:fixed;
+      inset:0;
+      cursor:zoom-out;
+    }
+
+    .lightbox-hint{
+      position:fixed;
+      top:18px;
+      right:22px;
+      color:#fff;
+      font-size:13px;
+      opacity:.82;
+    }
+
+    @media (max-width:900px){
+      .page{width:100%;margin:0}
+      .hero{
+        grid-template-columns:1fr;
+        border-radius:0;
+      }
+      .visual{padding:24px 18px}
+      .image-frame{min-height:360px}
+      .info{padding:38px 24px 42px}
+      .contents-grid{grid-template-columns:1fr}
+      section{
+        margin:18px 14px;
+        padding:26px 20px;
+      }
+      .price{font-size:32px}
+      .paypal{width:100%;min-width:0}
+      th,td{
+        display:block;
+        width:100%;
+      }
+      th{border-bottom:0}
+    }
+  </style>
 </head>
 
 <body>
-
-<header>
-    <h1>Seisodo Corp.</h1>
-    <p>Japan Sourcing · International Trade · Audio Products</p>
-</header>
-
-<section>
-    <h2>About Us</h2>
-
-    <p>
-        Seisodo Corp. is a Japan-based trading company specializing in
-        sourcing Japanese products and supporting international customers.
-    </p>
-
-    <p>
-        We provide procurement, export coordination,
-        product sourcing, and business support services
-        for clients worldwide.
-    </p>
-</section>
-
-<section>
-    <h2>Our Services</h2>
-
-    <div class="service-grid">
-
-        <div class="card">
-            <h3>Japanese Product Sourcing</h3>
-            <p>
-                Procurement support for consumer electronics,
-                hobby products, collectibles and specialty items.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Audio Products</h3>
-            <p>
-                Audio accessories, cables,
-                connectors and custom audio solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Traditional Japanese Textiles</h3>
-            <p>
-                Kimono fabrics, obi materials,
-                silk textiles and related products.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>International Trade</h3>
-            <p>
-                Export support, logistics coordination
-                and B2B trading services.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-<section>
-    <h2>Company Information</h2>
-
-    <p><strong>Company Name</strong><br>
-    Seisodo Corp.</p>
-
-    <p><strong>Location</strong><br>
-    Tokyo, Japan</p>
-
-    <p><strong>Business</strong><br>
-    Product Sourcing / International Trade / Export Support</p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-
-    <p>
-        Email:<br>
-        <a href="mailto:contact@seisodo.com">
-            contact@seisodo.com
+  <main class="page">
+    <article class="hero">
+      <div class="visual">
+        <a class="image-frame" id="mainLink" href="#image-viewer" aria-label="商品画像を拡大表示">
+          <img id="mainImage" src="main.png" alt="DIY AUDIO CONNECTOR SET 商品画像">
         </a>
-    </p>
-</section>
 
-<footer>
-    © 2026 Seisodo Corp. All Rights Reserved.
-</footer>
+        <div class="thumbs" aria-label="商品画像切替">
+          <button class="thumb active" type="button" data-src="main.png" data-alt="DIY AUDIO CONNECTOR SET 商品画像">
+            <img src="main.png" alt="">
+            <span>Product</span>
+          </button>
+          <button class="thumb" type="button" data-src="label.png" data-alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル">
+            <img src="label.png" alt="">
+            <span>Package</span>
+          </button>
+        </div>
 
+        <div class="hint">画像をクリックで拡大表示</div>
+      </div>
+
+      <div class="info">
+        <div class="brand">SEISODO&nbsp;&nbsp;JAPAN AUDIO PARTS</div>
+        <div class="series">NOBUNAGA Labs Pro Studio</div>
+
+        <h1>DIY AUDIO<br>CONNECTOR<br>SET</h1>
+
+        <p class="lead-items">
+          3.5mm 3極プラグ × 5束<br>
+          2.5mm 4極バランスジャック × 1束
+        </p>
+
+        <div class="badge">VALUE PACK | 5 BUNDLES + 1 BUNDLE</div>
+
+        <div class="price">¥3,000（税別）</div>
+        <p class="tax-note">
+          ※日本国内への発送は別途消費税（10%）が加算されます。海外発送の場合、消費税はかかりません。<br>
+          ※別途送料がかかります。送料はお届け先地域およびご注文数量に応じて異なり、チェックアウト時に自動計算されます。
+        </p>
+
+        <p class="desc">
+          音楽制作、イヤホンケーブル製作、修理・交換用途に適したDIY向けコネクターセットです。
+          小ロット製作や工房作業に使いやすいよう、3.5mm 3極プラグと2.5mm 4極バランスジャックを組み合わせました。
+        </p>
+
+        <a class="paypal"
+           href="https://www.paypal.com/ncp/payment/U7YKTG7LEA4G6"
+           target="_blank"
+           rel="noopener noreferrer">
+          PayPalで購入する
+        </a>
+
+        <div class="meta">LOT 21004&nbsp; | &nbsp;PRODUCT CODE 201000000004</div>
+      </div>
+    </article>
+
+    <section>
+      <h2>CONTENTS</h2>
+      <div class="contents-grid">
+        <div class="content-card">
+          <h3>3.5mm 3極プラグ</h3>
+          <p>NLP-SSD-IS3.5<br>5 BUNDLES</p>
+        </div>
+        <div class="content-card">
+          <h3>2.5mm 4極バランスジャック</h3>
+          <p>NLP-SSD-TPFEM<br>1 BUNDLE</p>
+        </div>
+        <div class="content-card">
+          <h3>用途</h3>
+          <p>DIY & Custom Soldering Recommended<br>For Audio DIY / Pro Studio Series</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>SPECIFICATION</h2>
+      <table>
+        <tr>
+          <th>シリーズ</th>
+          <td>NOBUNAGA Labs Pro Studio</td>
+        </tr>
+        <tr>
+          <th>商品名</th>
+          <td>DIY AUDIO CONNECTOR SET</td>
+        </tr>
+        <tr>
+          <th>3.5mm プラグ</th>
+          <td>NLP-SSD-IS3.5 | 5 BUNDLES</td>
+        </tr>
+        <tr>
+          <th>2.5mm ジャック</th>
+          <td>NLP-SSD-TPFEM | 1 BUNDLE</td>
+        </tr>
+        <tr>
+          <th>管理番号</th>
+          <td>LOT 21004 / PRODUCT CODE 201000000004</td>
+        </tr>
+      </table>
+      <p class="small-note">※製品の仕様・内容は予告なく変更することがあります。予めご了承ください。</p>
+    </section>
+  </main>
+
+  <div id="image-viewer" class="lightbox" aria-label="拡大画像">
+    <a href="#" class="lightbox-close" aria-label="閉じる"></a>
+    <div class="lightbox-hint">クリックで閉じる</div>
+    <img id="viewerImage" src="main.png" alt="DIY AUDIO CONNECTOR SET 拡大画像">
+  </div>
+
+  <script>
+    const mainImage = document.getElementById('mainImage');
+    const viewerImage = document.getElementById('viewerImage');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach((button) => {
+      button.addEventListener('click', () => {
+        const src = button.dataset.src;
+        const alt = button.dataset.alt;
+
+        mainImage.style.opacity = '0';
+        setTimeout(() => {
+          mainImage.src = src;
+          mainImage.alt = alt;
+          viewerImage.src = src;
+          viewerImage.alt = alt + ' 拡大画像';
+          mainImage.style.opacity = '1';
+        }, 120);
+
+        thumbs.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
