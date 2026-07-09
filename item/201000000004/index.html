@@ -30,8 +30,6 @@
       line-height:1.75;
     }
 
-    a{color:inherit}
-
     .page{
       width:min(1180px,calc(100% - 32px));
       margin:28px auto 48px;
@@ -39,7 +37,7 @@
 
     .hero{
       display:grid;
-      grid-template-columns:1.1fr .95fr;
+      grid-template-columns:1.05fr .95fr;
       overflow:hidden;
       border-radius:22px;
       background:var(--card);
@@ -49,28 +47,82 @@
 
     .visual{
       display:flex;
+      flex-direction:column;
       align-items:center;
       justify-content:center;
+      gap:22px;
       background:linear-gradient(90deg,#fbf6eb,#f8f0df);
-      padding:44px 30px;
+      padding:34px 30px;
       min-width:0;
     }
 
     .image-frame{
       width:100%;
-      max-width:610px;
-      padding:12px;
-      border-radius:10px;
-      background:#b8955d;
-      box-shadow:0 18px 38px rgba(0,0,0,.18);
+      max-width:560px;
+      min-height:430px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:12px;
+      background:#fdf9f1;
+      box-shadow:0 18px 38px rgba(0,0,0,.12);
+      overflow:hidden;
       cursor:zoom-in;
     }
 
     .image-frame img{
       display:block;
-      width:100%;
+      max-width:100%;
+      max-height:560px;
+      width:auto;
       height:auto;
-      border:0;
+      transition:opacity .18s ease;
+    }
+
+    .thumbs{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      align-items:flex-start;
+      width:100%;
+    }
+
+    .thumb{
+      width:120px;
+      padding:8px;
+      border:2px solid transparent;
+      border-radius:14px;
+      background:rgba(255,255,255,.72);
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(0,0,0,.08);
+      transition:border-color .15s ease, transform .15s ease, background .15s ease;
+      font:inherit;
+    }
+
+    .thumb:hover{transform:translateY(-1px)}
+    .thumb.active{border-color:var(--gold);background:#fff}
+
+    .thumb img{
+      width:100%;
+      height:78px;
+      object-fit:contain;
+      display:block;
+      border-radius:8px;
+    }
+
+    .thumb span{
+      display:block;
+      margin-top:6px;
+      font-size:13px;
+      font-weight:800;
+      color:#3d352c;
+      text-align:center;
+    }
+
+    .hint{
+      color:#7c7164;
+      font-size:13px;
+      text-align:center;
     }
 
     .info{
@@ -288,7 +340,8 @@
         grid-template-columns:1fr;
         border-radius:0;
       }
-      .visual{padding:28px 18px}
+      .visual{padding:24px 18px}
+      .image-frame{min-height:360px}
       .info{padding:38px 24px 42px}
       .contents-grid{grid-template-columns:1fr}
       section{
@@ -310,9 +363,22 @@
   <main class="page">
     <article class="hero">
       <div class="visual">
-        <a class="image-frame" href="#label-image" aria-label="商品ラベル画像を拡大表示">
-          <img src="label.png" alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル">
+        <a class="image-frame" id="mainLink" href="#image-viewer" aria-label="商品画像を拡大表示">
+          <img id="mainImage" src="main.png" alt="DIY AUDIO CONNECTOR SET 商品画像">
         </a>
+
+        <div class="thumbs" aria-label="商品画像切替">
+          <button class="thumb active" type="button" data-src="main.png" data-alt="DIY AUDIO CONNECTOR SET 商品画像">
+            <img src="main.png" alt="">
+            <span>Product</span>
+          </button>
+          <button class="thumb" type="button" data-src="label.png" data-alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル">
+            <img src="label.png" alt="">
+            <span>Package</span>
+          </button>
+        </div>
+
+        <div class="hint">画像をクリックで拡大表示</div>
       </div>
 
       <div class="info">
@@ -396,10 +462,35 @@
     </section>
   </main>
 
-  <div id="label-image" class="lightbox" aria-label="拡大画像">
+  <div id="image-viewer" class="lightbox" aria-label="拡大画像">
     <a href="#" class="lightbox-close" aria-label="閉じる"></a>
     <div class="lightbox-hint">クリックで閉じる</div>
-    <img src="label.png" alt="SEISODO DIY AUDIO CONNECTOR SET 商品ラベル拡大画像">
+    <img id="viewerImage" src="main.png" alt="DIY AUDIO CONNECTOR SET 拡大画像">
   </div>
+
+  <script>
+    const mainImage = document.getElementById('mainImage');
+    const viewerImage = document.getElementById('viewerImage');
+    const thumbs = document.querySelectorAll('.thumb');
+
+    thumbs.forEach((button) => {
+      button.addEventListener('click', () => {
+        const src = button.dataset.src;
+        const alt = button.dataset.alt;
+
+        mainImage.style.opacity = '0';
+        setTimeout(() => {
+          mainImage.src = src;
+          mainImage.alt = alt;
+          viewerImage.src = src;
+          viewerImage.alt = alt + ' 拡大画像';
+          mainImage.style.opacity = '1';
+        }, 120);
+
+        thumbs.forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
