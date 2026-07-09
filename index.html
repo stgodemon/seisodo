@@ -1,157 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seisodo Corp.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seisodo Corp. | Japan Sourcing & International Trade</title>
+  <meta name="description" content="Seisodo Corp. is a Japan-based trading company providing product sourcing, private purchasing, international shipping support, audio products, textiles and export coordination.">
+  <style>
+    :root{
+      --navy:#202b38;
+      --ink:#1c2430;
+      --muted:#5b6470;
+      --line:#d9dee5;
+      --bg:#f7f8fa;
+      --card:#ffffff;
+      --accent:#b18a4a;
+    }
 
-<style>
-body{
-    margin:0;
-    font-family:Arial, Helvetica, sans-serif;
-    color:#333;
-    line-height:1.8;
-}
+    *{box-sizing:border-box}
 
-header{
-    background:#1f2937;
-    color:white;
-    padding:60px 20px;
-    text-align:center;
-}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      color:var(--ink);
+      background:#fff;
+      line-height:1.75;
+    }
 
-header h1{
-    margin:0;
-    font-size:42px;
-}
+    a{color:#0057b8}
 
-header p{
-    margin-top:10px;
-    font-size:18px;
-    color:#d1d5db;
-}
+    .lang-switch{
+      position:absolute;
+      top:22px;
+      right:24px;
+      display:flex;
+      gap:8px;
+      z-index:5;
+    }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:60px 20px;
-}
+    .lang-switch button{
+      border:1px solid rgba(255,255,255,.35);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      border-radius:999px;
+      padding:7px 13px;
+      font-weight:700;
+      cursor:pointer;
+      letter-spacing:.03em;
+    }
 
-h2{
-    border-left:4px solid #1f2937;
-    padding-left:12px;
-}
+    .lang-switch button.active{
+      background:#fff;
+      color:var(--navy);
+    }
 
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+    header{
+      position:relative;
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+      padding:72px 24px 78px;
+    }
 
-.card{
-    border:1px solid #ddd;
-    padding:20px;
-    border-radius:8px;
-}
+    header h1{
+      margin:0;
+      font-size:40px;
+      letter-spacing:.02em;
+    }
 
-footer{
-    background:#f5f5f5;
-    text-align:center;
-    padding:40px;
-    margin-top:60px;
-}
-</style>
+    header p{
+      margin:20px 0 0;
+      color:#eef3f8;
+      font-size:16px;
+    }
+
+    main{
+      width:min(960px,calc(100% - 40px));
+      margin:0 auto;
+      padding:62px 0 72px;
+    }
+
+    section{
+      margin-bottom:74px;
+    }
+
+    h2{
+      margin:0 0 24px;
+      padding-left:14px;
+      border-left:4px solid var(--navy);
+      font-size:25px;
+      line-height:1.25;
+    }
+
+    .lead{
+      color:#2e3743;
+      margin-bottom:18px;
+    }
+
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:8px;
+      background:var(--card);
+      padding:24px;
+      min-height:172px;
+    }
+
+    .card h3{
+      margin:0 0 14px;
+      font-size:18px;
+    }
+
+    .card p{
+      margin:0;
+      color:#343d49;
+      font-size:15px;
+    }
+
+    .company-list{
+      display:grid;
+      gap:18px;
+      max-width:620px;
+    }
+
+    .company-item strong{
+      display:block;
+      margin-bottom:4px;
+    }
+
+    .company-item span{
+      color:#343d49;
+    }
+
+    .note{
+      padding:20px 24px;
+      border-left:4px solid var(--accent);
+      background:#fbf7ef;
+      color:#3a332a;
+      border-radius:6px;
+      margin-top:26px;
+    }
+
+    footer{
+      background:#f2f4f7;
+      border-top:1px solid var(--line);
+      color:#68717d;
+      text-align:center;
+      padding:28px 20px;
+      font-size:13px;
+    }
+
+    .ja{display:none}
+
+    body.lang-ja .en{display:none}
+    body.lang-ja .ja{display:initial}
+    body.lang-ja p.ja,
+    body.lang-ja div.ja,
+    body.lang-ja section.ja{display:block}
+    body.lang-ja li.ja{display:list-item}
+
+    @media(max-width:760px){
+      header{padding-top:82px}
+      header h1{font-size:32px}
+      .lang-switch{
+        top:16px;
+        right:16px;
+      }
+      main{
+        width:min(100% - 30px,960px);
+        padding-top:44px;
+      }
+      .service-grid{
+        grid-template-columns:1fr;
+      }
+      section{
+        margin-bottom:56px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-<header>
-    <h1>Seisodo Corp.</h1>
-    <p>Japan Sourcing · International Trade · Audio Products</p>
-</header>
-
-<section>
-    <h2>About Us</h2>
-
-    <p>
-        Seisodo Corp. is a Japan-based trading company specializing in
-        sourcing Japanese products and supporting international customers.
-    </p>
-
-    <p>
-        We provide procurement, export coordination,
-        product sourcing, and business support services
-        for clients worldwide.
-    </p>
-</section>
-
-<section>
-    <h2>Our Services</h2>
-
-    <div class="service-grid">
-
-        <div class="card">
-            <h3>Japanese Product Sourcing</h3>
-            <p>
-                Procurement support for consumer electronics,
-                hobby products, collectibles and specialty items.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Audio Products</h3>
-            <p>
-                Audio accessories, cables,
-                connectors and custom audio solutions.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Traditional Japanese Textiles</h3>
-            <p>
-                Kimono fabrics, obi materials,
-                silk textiles and related products.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>International Trade</h3>
-            <p>
-                Export support, logistics coordination
-                and B2B trading services.
-            </p>
-        </div>
-
+  <header>
+    <div class="lang-switch" aria-label="Language switch">
+      <button id="btn-en" class="active" type="button">EN</button>
+      <button id="btn-ja" type="button">日本語</button>
     </div>
-</section>
 
-<section>
-    <h2>Company Information</h2>
-
-    <p><strong>Company Name</strong><br>
-    Seisodo Corp.</p>
-
-    <p><strong>Location</strong><br>
-    Tokyo, Japan</p>
-
-    <p><strong>Business</strong><br>
-    Product Sourcing / International Trade / Export Support</p>
-</section>
-
-<section>
-    <h2>Contact</h2>
-
+    <h1>
+      <span class="en">Seisodo Corp.</span>
+      <span class="ja">星草堂株式会社</span>
+    </h1>
     <p>
-        Email:<br>
-        <a href="mailto:contact@seisodo.com">
-            contact@seisodo.com
-        </a>
+      <span class="en">Japan Sourcing · International Trade · Audio Products</span>
+      <span class="ja">日本商品の調達 · 国際貿易 · オーディオ関連商品</span>
     </p>
-</section>
+  </header>
 
-<footer>
-    © 2026 Seisodo Corp. All Rights Reserved.
-</footer>
+  <main>
+    <section>
+      <h2>
+        <span class="en">About Us</span>
+        <span class="ja">会社概要</span>
+      </h2>
 
+      <p class="lead en">
+        Seisodo Corp. is a Japan-based trading company specializing in sourcing Japanese products and supporting international customers.
+      </p>
+      <p class="lead en">
+        We provide procurement, export coordination, product sourcing, and business support services for clients worldwide.
+      </p>
+
+      <p class="lead ja">
+        星草堂株式会社は、日本国内の商品調達および海外向け取引を行う日本の貿易会社です。
+      </p>
+      <p class="lead ja">
+        商品の購入代行、輸出手配、商品リサーチ、ビジネスサポートなど、海外のお客様向けに幅広く対応しています。
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        <span class="en">Our Services</span>
+        <span class="ja">サービス内容</span>
+      </h2>
+
+      <div class="service-grid">
+        <div class="card">
+          <h3>
+            <span class="en">Private Purchasing Service</span>
+            <span class="ja">個人向け購入代行</span>
+          </h3>
+          <p class="en">
+            We help overseas customers purchase items from Japanese marketplaces such as Mercari, Yahoo! Auctions, Rakuma and other online stores.
+          </p>
+          <p class="ja">
+            メルカリ、Yahoo!オークション、ラクマ、各種オンラインショップなど、日本国内のマーケットプレイスで販売されている商品の購入代行に対応しています。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span class="en">Japanese Product Sourcing</span>
+            <span class="ja">日本商品の調達</span>
+          </h3>
+          <p class="en">
+            Procurement support for consumer electronics, hobby products, collectibles, limited items and hard-to-find products.
+          </p>
+          <p class="ja">
+            家電、ホビー商品、コレクション品、限定品、入手困難品など、日本商品の調達をサポートします。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span class="en">Audio Products</span>
+            <span class="ja">オーディオ関連商品</span>
+          </h3>
+          <p class="en">
+            Audio accessories, cables, connectors, DIY parts and custom audio solutions.
+          </p>
+          <p class="ja">
+            オーディオアクセサリー、ケーブル、コネクター、DIYパーツ、カスタムオーディオ関連商品の取り扱いに対応しています。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span class="en">Traditional Japanese Textiles</span>
+            <span class="ja">日本伝統織物・和装関連商品</span>
+          </h3>
+          <p class="en">
+            Kimono fabrics, obi materials, silk textiles and related Japanese textile products.
+          </p>
+          <p class="ja">
+            着物生地、帯地、絹織物、和装関連商品など、日本の伝統織物に関する商品にも対応しています。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span class="en">International Trade</span>
+            <span class="ja">国際取引・輸出サポート</span>
+          </h3>
+          <p class="en">
+            Export support, logistics coordination, international shipping and B2B trading services.
+          </p>
+          <p class="ja">
+            輸出手配、物流調整、海外発送、B2B取引など、国際取引に関するサポートを行います。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>
+            <span class="en">Custom Requests</span>
+            <span class="ja">個別相談・カスタム対応</span>
+          </h3>
+          <p class="en">
+            We accept individual requests depending on product type, availability, destination and shipping conditions.
+          </p>
+          <p class="ja">
+            商品内容、在庫状況、発送先、配送条件に応じて、個別のご相談にも対応いたします。
+          </p>
+        </div>
+      </div>
+
+      <div class="note">
+        <span class="en">
+          Please contact us with the product URL or details of the item you would like to purchase. Used items may vary in condition, so we recommend confirming the exact listing before purchase.
+        </span>
+        <span class="ja">
+          ご希望の商品URLまたは商品情報をお送りください。中古品は状態に個体差があるため、ご購入前に対象商品の確認をお願いしております。
+        </span>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        <span class="en">Company Information</span>
+        <span class="ja">会社情報</span>
+      </h2>
+
+      <div class="company-list">
+        <div class="company-item">
+          <strong>
+            <span class="en">Company Name</span>
+            <span class="ja">会社名</span>
+          </strong>
+          <span>
+            <span class="en">Seisodo Corp.</span>
+            <span class="ja">星草堂株式会社</span>
+          </span>
+        </div>
+
+        <div class="company-item">
+          <strong>
+            <span class="en">Location</span>
+            <span class="ja">所在地</span>
+          </strong>
+          <span>
+            <span class="en">Tokyo, Japan</span>
+            <span class="ja">東京都、日本</span>
+          </span>
+        </div>
+
+        <div class="company-item">
+          <strong>
+            <span class="en">Business</span>
+            <span class="ja">事業内容</span>
+          </strong>
+          <span>
+            <span class="en">Product Sourcing / Private Purchasing / International Trade / Export Support</span>
+            <span class="ja">商品調達 / 購入代行 / 国際貿易 / 輸出サポート</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>
+        <span class="en">Contact</span>
+        <span class="ja">お問い合わせ</span>
+      </h2>
+
+      <p>
+        <span class="en">Email:</span>
+        <span class="ja">メール：</span><br>
+        <a href="mailto:contact@seisodo.com">contact@seisodo.com</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © Seisodo Corp. All rights reserved.
+  </footer>
+
+  <script>
+    const btnEn = document.getElementById('btn-en');
+    const btnJa = document.getElementById('btn-ja');
+
+    function setLang(lang){
+      if(lang === 'ja'){
+        document.body.classList.add('lang-ja');
+        document.documentElement.lang = 'ja';
+        btnJa.classList.add('active');
+        btnEn.classList.remove('active');
+      }else{
+        document.body.classList.remove('lang-ja');
+        document.documentElement.lang = 'en';
+        btnEn.classList.add('active');
+        btnJa.classList.remove('active');
+      }
+      localStorage.setItem('seisodoLang', lang);
+    }
+
+    btnEn.addEventListener('click', () => setLang('en'));
+    btnJa.addEventListener('click', () => setLang('ja'));
+
+    const saved = localStorage.getItem('seisodoLang');
+    if(saved){
+      setLang(saved);
+    }else{
+      const browserLang = navigator.language || navigator.userLanguage || '';
+      setLang(browserLang.toLowerCase().startsWith('ja') ? 'ja' : 'en');
+    }
+  </script>
 </body>
 </html>
